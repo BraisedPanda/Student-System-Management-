@@ -1,0 +1,50 @@
+
+spring:
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+  messages:
+    encoding: UTF-8
+  application:
+    name: student-management-system-web
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+        namespace: ${spring.cloud.nacos.config.namespace}
+      config:
+        server-addr: 192.168.91.1:8848
+        namespace: c7dfb53e-dc03-4218-88ce-9fea3a9abe4d
+        file-extension: yaml
+
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      druid:
+        name: druidDataSource
+        username: root
+        password: 123456
+        url: jdbc:mysql://localhost:3306/studentsystem?serverTimezone=UTC
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        max-active: 20
+        initial-size: 1
+        use-global-data-source-stat: true
+        min-idle: 1
+        max-wait: 60000
+        max-open-prepared-statements: 20
+        pool-prepared-statements: true
+        time-between-eviction-runs-millis: 60000
+        min-evictable-idle-time-millis: 300000
+        validation-query: SELECT 1 FROM DUAL
+        test-while-idle: true
+        test-on-borrow: false
+        test-on-return: false
+
+server:
+  port: 8100

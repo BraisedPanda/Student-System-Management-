@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="student-management-system-user-api" />
+        <module name="student-management-system-user-provider" />
+        <module name="student-management-system-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="student-management-system" target="1.5" />
+      <module name="student-management-system-user" target="1.5" />
+      <module name="student-management-system-user-api" target="1.5" />
+      <module name="student-management-system-user-provider" target="1.5" />
+      <module name="student-management-system-web" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

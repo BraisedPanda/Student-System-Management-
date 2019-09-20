@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/student-management-system.iml" filepath="$PROJECT_DIR$/student-management-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/student-management-system-user/student-management-system-user.iml" filepath="$PROJECT_DIR$/student-management-system-user/student-management-system-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/student-management-system-user/student-management-system-user-api/student-management-system-user-api.iml" filepath="$PROJECT_DIR$/student-management-system-user/student-management-system-user-api/student-management-system-user-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/student-management-system-user/student-management-system-user-provider/student-management-system-user-provider.iml" filepath="$PROJECT_DIR$/student-management-system-user/student-management-system-user-provider/student-management-system-user-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/student-management-system-web/student-management-system-web.iml" filepath="$PROJECT_DIR$/student-management-system-web/student-management-system-web.iml" />
+    </modules>
+  </component>
+</project>
