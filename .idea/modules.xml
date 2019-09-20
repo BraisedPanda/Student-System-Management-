@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/student-management-system.iml" filepath="$PROJECT_DIR$/student-management-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/student-management-system-permission/student-management-system-permission.iml" filepath="$PROJECT_DIR$/student-management-system-permission/student-management-system-permission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/student-management-system-permission/student-management-system-permission-api/student-management-system-permission-api.iml" filepath="$PROJECT_DIR$/student-management-system-permission/student-management-system-permission-api/student-management-system-permission-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/student-management-system-permission/student-management-system-permission-provider/student-management-system-permission-provider.iml" filepath="$PROJECT_DIR$/student-management-system-permission/student-management-system-permission-provider/student-management-system-permission-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/student-management-system-user/student-management-system-user.iml" filepath="$PROJECT_DIR$/student-management-system-user/student-management-system-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/student-management-system-user/student-management-system-user-api/student-management-system-user-api.iml" filepath="$PROJECT_DIR$/student-management-system-user/student-management-system-user-api/student-management-system-user-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/student-management-system-user/student-management-system-user-provider/student-management-system-user-provider.iml" filepath="$PROJECT_DIR$/student-management-system-user/student-management-system-user-provider/student-management-system-user-provider.iml" />

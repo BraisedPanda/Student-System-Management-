@@ -5,7 +5,7 @@
       <configuration />
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+  <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -93,6 +93,7 @@
     <orderEntry type="library" name="Maven: org.apache.dubbo:dubbo-spring-boot-starter:2.7.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.dubbo:dubbo-spring-boot-autoconfigure:2.7.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.dubbo:dubbo-spring-boot-autoconfigure-compatible:2.7.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-dubbo:unknown" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba.cloud:spring-cloud-starter-dubbo:2.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba.cloud:spring-cloud-alibaba-dubbo:2.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: io.github.openfeign:feign-jaxrs2:9.7.0" level="project" />

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>我的成绩</title>
+
+    <link rel="stylesheet" href="http://www.braisedpanda.club:8082/StudentSystem/static/layui/css/layui.css">
+    <link rel="stylesheet" href="http://www.braisedpanda.club:8082/StudentSystem/static/lib/css/main.css">
+    <link rel="stylesheet" href="http://www.braisedpanda.club:8082/StudentSystem/static/lib/css/public.css">
+
+    <script src="http://www.braisedpanda.club:8082/StudentSystem/static/lib/js/jquery-3.4.1.min.js"></script>
+    <script src="http://www.braisedpanda.club:8082/StudentSystem/static/layui/layui.js"></script>
+    <script th:src="@{/lib/js/classstudentgrades.js}"></script>
+
+
+
+</head>
+
+<style>
+
+    #classId{
+        display:none;
+    }
+    body{
+        background-image: url("http://www.braisedpanda.club:8082/StudentSystem/static/images/background/page_bg.JPG");
+        background-size: 100%;
+
+    }
+</style>
+
+
+
+<body>
+<!--<div th:replace="menu/left :: leftbar" ></div>-->
+<!--<div th:replace="menu/top :: topbar"></div>-->
+
+
+<div class="table">
+    <div id="classId" th:text="${classId}"></div>
+    <h2 class="tablename" th:text="${class_cid}+'学生成绩'"></h2>
+    <hr class="layui-bg-gray">
+<table class="layui-hide" id="demo" lay-filter="test"></table>
+</div>
+
+</body>
+
+</html>

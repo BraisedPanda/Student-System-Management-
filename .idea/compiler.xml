@@ -6,17 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="student-management-system-permission-api" />
+        <module name="student-management-system-permission-provider" />
         <module name="student-management-system-user-api" />
         <module name="student-management-system-user-provider" />
         <module name="student-management-system-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="student-management-system" target="1.5" />
-      <module name="student-management-system-user" target="1.5" />
-      <module name="student-management-system-user-api" target="1.5" />
-      <module name="student-management-system-user-provider" target="1.5" />
-      <module name="student-management-system-web" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="student-management-system" target="1.8" />
+      <module name="student-management-system-permission" target="1.8" />
+      <module name="student-management-system-permission-api" target="1.8" />
+      <module name="student-management-system-permission-provider" target="1.8" />
+      <module name="student-management-system-user" target="1.8" />
+      <module name="student-management-system-user-api" target="1.8" />
+      <module name="student-management-system-user-provider" target="1.8" />
+      <module name="student-management-system-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

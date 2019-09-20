@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+
+    <link rel="stylesheet" href="http://www.braisedpanda.club:8082/StudentSystem/static/layui/css/layui.css">
+    <link rel="stylesheet" href="http://www.braisedpanda.club:8082/StudentSystem/static/lib/css/main.css">
+    <link rel="stylesheet" href="http://www.braisedpanda.club:8082/StudentSystem/static/lib/css/public.css">
+
+    <script src="http://www.braisedpanda.club:8082/StudentSystem/static/lib/js/jquery-3.4.1.min.js"></script>
+    <script src="http://www.braisedpanda.club:8082/StudentSystem/static/layui/layui.js"></script>
+    <script src="http://www.braisedpanda.club:8082/StudentSystem/static/lib/js/allstudent.js"></script>
+
+
+
+</head>
+
+<style>
+    .msg{
+        margin-left: 200px;
+        height:800px;
+    }
+
+</style>
+
+
+
+<body>
+
+
+
+<div class="table">
+<div class="msg" >
+    操作成功~
+    <div th:text="${msg}"></div>
+</div>
+</div>
+
+
+
+</body>
+
+</html>

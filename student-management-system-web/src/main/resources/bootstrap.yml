@@ -20,8 +20,8 @@ spring:
         server-addr: ${spring.cloud.nacos.config.server-addr}
         namespace: ${spring.cloud.nacos.config.namespace}
       config:
-        server-addr: 192.168.91.1:8848
-        namespace: c7dfb53e-dc03-4218-88ce-9fea3a9abe4d
+        server-addr: 47.98.135.254:8848
+        namespace: ac936854-b64c-438a-b55c-3271e3dde018
         file-extension: yaml
 
   datasource:

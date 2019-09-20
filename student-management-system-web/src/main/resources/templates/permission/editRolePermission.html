@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑用户权限</title>
+
+    <link rel="stylesheet" href="http://www.braisedpanda.club:8082/StudentSystem/static/layui/css/layui.css">
+    <link rel="stylesheet" href="http://www.braisedpanda.club:8082/StudentSystem/static/lib/css/main.css">
+    <link rel="stylesheet" th:href="@{/lib/css/public_permission.css}">
+
+    <script src="http://www.braisedpanda.club:8082/StudentSystem/static/lib/js/jquery-3.4.1.min.js"></script>
+    <script src="http://www.braisedpanda.club:8082/StudentSystem/static/layui/layui.js"></script>
+
+
+
+
+</head>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+        var element = layui.element;
+
+        //…
+    });
+</script>
+<style>
+
+    .layui-form{
+        width:600px;
+    }
+    body{
+        background-image: url("http://www.braisedpanda.club:8082/StudentSystem/static/images/background/page_bg.JPG");
+        background-size: 100%;
+
+    }
+
+</style>
+
+<body>
+<!--<div th:replace="menu/left :: leftbar" ></div>-->
+<!--<div th:replace="menu/top :: topbar"></div>-->
+
+
+<div class="table">
+    <h2 class="tablename">更改权限</h2>
+    <hr class="layui-bg-green">
+    <form class="layui-form" th:action="@{/editrolePermission}">
+        <div class="layui-form-item">
+            <input type="hidden" name="roleId" th:value="${rolePermission.roleId}">
+            <label class="layui-form-label">角色名称:</label>
+            <div class="layui-input-block">
+                <input type="text" name="role" required  lay-verify="required" th:value="${rolePermission.role}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">描述信息:</label>
+            <div class="layui-input-block">
+                <input type="text" name="roleDescribe" required th:value="${rolePermission.roleDescribe}" lay-verify="required" placeholder="请输入角色描述信息" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">操作权限:</label>
+            <div class="layui-input-block">
+
+                <input type="checkbox" name="permission" th:value="${permission.permissionId}" th:title="${permission.permissionDescribe}" th:each="permission:${permissionList}" th:if="${permission.permissionId =='01' || permission.permissionId =='02'|| permission.permissionId =='03'|| permission.permissionId =='04'}">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">菜单权限:</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="permission" th:value="${permission.permissionId}" th:title="${permission.permissionDescribe}" th:each="permission:${permissionList}" th:if="${permission.permissionId !='01' && permission.permissionId !='02'&& permission.permissionId !='03'&& permission.permissionId !='04'}">
+
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        //Demo
+        layui.use('form', function(){
+            var form = layui.form;
+
+        });
+    </script>
+</div>
+
+
+
+</body>
+
+</html>
