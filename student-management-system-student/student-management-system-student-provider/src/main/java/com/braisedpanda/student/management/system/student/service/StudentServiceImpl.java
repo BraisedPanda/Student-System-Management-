@@ -1,10 +1,12 @@
 package com.braisedpanda.student.management.system.student.service;
 
+
 import com.braisedpanda.student.management.system.student.mapper.StudentMapper;
 import com.braisedpanda.student.management.system.student.model.po.Student;
+import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
+import com.github.pagehelper.PageHelper;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
@@ -106,9 +108,6 @@ public class StudentServiceImpl implements StudentService {
     }
 
 
-
-   
-
     /** 
     * @Description: 根据班级的classid查找出该班的所有学生
     * @Param:  
@@ -136,7 +135,15 @@ public class StudentServiceImpl implements StudentService {
         int count = studentMapper.selectCount(student);
         return count;
     }
+    /** 
+    * @Description: 分页查询学生
+    * @author: chenzhen
+    * @Date: 2019/9/21 0021 
+    */ 
+    public List<Student> pageStudent(int page, int limit) {
+        PageHelper.startPage(page,limit);
+        List<Student> studentList = studentMapper.selectAll();
 
-
-
+        return PageHelperUtils.getResultList(studentList);
+    }
 }

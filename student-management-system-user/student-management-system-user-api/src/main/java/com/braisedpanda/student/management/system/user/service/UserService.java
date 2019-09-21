@@ -26,4 +26,6 @@ public interface UserService {
     void updateUserById(User user);
     //统计用户人数
     int countUser();
+    //分页查询所有用户
+    List<User> pageUser(int page, int limit);
 }

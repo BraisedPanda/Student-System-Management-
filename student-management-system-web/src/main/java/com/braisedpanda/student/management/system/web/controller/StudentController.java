@@ -10,10 +10,8 @@ import com.braisedpanda.student.management.system.student.service.NationService;
 import com.braisedpanda.student.management.system.student.service.StudentService;
 import com.braisedpanda.student.management.system.user.service.UserService;
 import com.braisedpanda.student.management.system.web.biz.StudentBiz;
-import com.braisedpanda.student.management.system.web.utils.JsonUtils;
-import com.braisedpanda.student.management.system.web.utils.ResultType;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
+import com.braisedpanda.student.management.system.commons.utils.JsonUtils;
+import com.braisedpanda.student.management.system.commons.utils.ResultType;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -47,8 +45,6 @@ public class StudentController {
 
          studentBiz.addStudent();
 
-
-
     }
 
 
@@ -56,14 +52,9 @@ public class StudentController {
     @RequestMapping("student/all")
     public @ResponseBody
     String allStudent2(int page, int limit){
-//        String result = studentBiz.allStudent(page,limit);
-        int count = studentService.countStudent();
-        PageHelper.startPage(page, limit);
-        List<Student> studentList = studentService.selectAllStudent();
-        System.out.println("studentList:"+studentList.size());
-        PageInfo pageInfo1 = new PageInfo(studentList);
-        System.out.println(pageInfo1);
-        List<Student> resultList = pageInfo1.getList();
+
+            int count = studentService.countStudent();
+           List<Student> resultList =  studentService.pageStudent(page,limit);
         String result =  JsonUtils.createResultJson(ResultType.SimpleResultType.SUCCESS,count,resultList).toJSONString();
         return result;
 
@@ -115,7 +106,6 @@ public class StudentController {
         modelAndView.addObject("student",student);
 
         modelAndView.setViewName("student/editstudent");
-
 
         return modelAndView;
     }

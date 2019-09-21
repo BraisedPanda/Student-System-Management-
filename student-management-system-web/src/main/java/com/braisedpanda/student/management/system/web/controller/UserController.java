@@ -2,6 +2,8 @@ package com.braisedpanda.student.management.system.web.controller;
 
 
 
+import com.braisedpanda.student.management.system.commons.utils.JsonUtils;
+import com.braisedpanda.student.management.system.commons.utils.ResultType;
 import com.braisedpanda.student.management.system.user.model.po.User;
 import com.braisedpanda.student.management.system.user.service.UserService;
 
@@ -188,8 +190,10 @@ public class UserController {
     //查询用户角色表
     @RequestMapping("user/table")
     public @ResponseBody String testtable2(int page,int limit){
+        int count = userService.countUser();
+        List<User> resultList = userService.pageUser(page,limit);
 
-       String result = userBiz.testtable(page,limit);
+       String result = JsonUtils.createResultJson(ResultType.SimpleResultType.SUCCESS,count,resultList).toJSONString();
 
         return result;
 

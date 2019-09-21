@@ -1,4 +1,4 @@
-package com.braisedpanda.student.management.system.web.utils;
+package com.braisedpanda.student.management.system.commons.utils;
 
 import com.alibaba.fastjson.JSONObject;
 

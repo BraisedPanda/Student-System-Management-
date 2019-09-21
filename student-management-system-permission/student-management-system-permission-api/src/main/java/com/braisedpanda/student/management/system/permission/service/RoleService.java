@@ -24,4 +24,6 @@ public interface RoleService {
 
     //统计出role表中所有的数目
     int countRole();
+    //分页查询role表
+    List<Role> pageRole(int page, int limit);
 }

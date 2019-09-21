@@ -1,7 +1,9 @@
 package com.braisedpanda.student.management.system.permission.service;
 
+import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
 import com.braisedpanda.student.management.system.permission.mapper.RoleMapper;
 import com.braisedpanda.student.management.system.permission.model.po.Role;
+import com.github.pagehelper.PageHelper;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -90,5 +92,15 @@ public class RoleServiceImpl implements RoleService {
         Role role = new Role();
         int count = roleMapper.selectCount(role);
         return count;
+    }
+    /**
+    * @Description: 分页查询role表
+    * @author: chenzhen
+    * @Date: 2019/9/21 0021
+    */
+    public List<Role> pageRole(int page, int limit) {
+        PageHelper.startPage(page,limit);
+        List<Role> roleList = roleMapper.selectAll();
+        return PageHelperUtils.getResultList(roleList);
     }
 }

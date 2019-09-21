@@ -16,7 +16,13 @@
             <artifactId>student-management-system-class-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.braisedpanda</groupId>
+            <artifactId>student-management-system-commons</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
+
 
 
 </project>

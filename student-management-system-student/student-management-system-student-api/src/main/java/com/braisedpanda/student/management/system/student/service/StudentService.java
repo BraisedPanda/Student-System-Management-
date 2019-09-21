@@ -32,4 +32,9 @@ public interface StudentService {
     List<Student> getStudentByClassId(String classId);
     //查询所有的学生
     int countStudent();
+
+    //分页查询学生
+    List<Student> pageStudent(int page,int limit);
+
+
 }

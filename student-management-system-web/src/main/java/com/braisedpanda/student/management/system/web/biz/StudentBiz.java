@@ -14,10 +14,6 @@ import com.braisedpanda.student.management.system.student.service.NationService;
 import com.braisedpanda.student.management.system.student.service.StudentService;
 import com.braisedpanda.student.management.system.user.model.po.User;
 import com.braisedpanda.student.management.system.user.service.UserService;
-import com.braisedpanda.student.management.system.web.utils.JsonUtils;
-import com.braisedpanda.student.management.system.web.utils.PageHelperUtils;
-import com.braisedpanda.student.management.system.web.utils.ResultType;
-import com.github.pagehelper.PageHelper;
 
 import org.apache.dubbo.config.annotation.Reference;
 
@@ -95,25 +91,6 @@ public class StudentBiz {
 
 
     }
-
-
-    //查询所有学生
-
-    public String allStudent(int page, int limit){
-        int count = studentService.countStudent();
-
-        PageHelper.startPage(page,limit);
-        List<Student> studentList1 = studentService.selectAllStudent();
-
-        List resultList = PageHelperUtils.getResultList(studentList1);
-
-
-        String result =  JsonUtils.createResultJson(ResultType.SimpleResultType.SUCCESS,count,resultList).toJSONString();
-
-        return result;
-
-    }
-
 
 
     //查询学生的学习成绩卡

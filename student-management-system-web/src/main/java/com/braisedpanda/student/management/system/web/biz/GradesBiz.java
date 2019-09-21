@@ -12,13 +12,12 @@ import com.braisedpanda.student.management.system.sclass.service.ClassService;
 import com.braisedpanda.student.management.system.student.model.po.Student;
 import com.braisedpanda.student.management.system.student.service.NationService;
 import com.braisedpanda.student.management.system.student.service.StudentService;
-import com.braisedpanda.student.management.system.web.utils.JsonUtils;
-import com.braisedpanda.student.management.system.web.utils.ResultType;
-import com.braisedpanda.student.management.system.web.utils.Utils;
+import com.braisedpanda.student.management.system.commons.utils.JsonUtils;
+import com.braisedpanda.student.management.system.commons.utils.ResultType;
+import com.braisedpanda.student.management.system.commons.utils.Utils;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.apache.dubbo.config.annotation.Reference;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -513,23 +512,16 @@ public class GradesBiz {
      * 1、查出所有班级的成绩
      * 2、封装成绩数据到customGrades中
      * 3、使用分页把前端数据传给前端
-     * @param page
-     * @param limit
+
      * @return
      */
-    public String classgrades(int page,int limit){
+    public String setClassGrades(List<ClassGrades> classGradesList,int page,int limit,int count){
 
-
-        int count = classGradesService.countClassGrades();
-
-        PageHelper.startPage(page,limit);
-
-        List<ClassGrades> ClassGradeslist1 = classGradesService.listClassGrades();
 
         List<Object> customList = new ArrayList();
 
         for (ClassGrades cgrades:
-                ClassGradeslist1 ) {
+                classGradesList ) {
             String classGradesCardId = cgrades.getClassGradesCardId();
             ClassGradesCard card = classGradesCardService.getClassGradesCardByID(classGradesCardId);
             CustomClassGradesVO custom = new CustomClassGradesVO();

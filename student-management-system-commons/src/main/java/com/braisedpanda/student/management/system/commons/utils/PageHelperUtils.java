@@ -1,5 +1,6 @@
-package com.braisedpanda.student.management.system.web.utils;
+package com.braisedpanda.student.management.system.commons.utils;
 
+import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;

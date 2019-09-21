@@ -12,13 +12,12 @@ import com.braisedpanda.student.management.system.sclass.service.ClassService;
 import com.braisedpanda.student.management.system.student.model.po.Student;
 import com.braisedpanda.student.management.system.student.service.NationService;
 import com.braisedpanda.student.management.system.student.service.StudentService;
-import com.braisedpanda.student.management.system.web.utils.JsonUtils;
-import com.braisedpanda.student.management.system.web.utils.PageHelperUtils;
-import com.braisedpanda.student.management.system.web.utils.ResultType;
+import com.braisedpanda.student.management.system.commons.utils.JsonUtils;
+import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
+import com.braisedpanda.student.management.system.commons.utils.ResultType;
 import com.github.pagehelper.PageHelper;
 
 import org.apache.dubbo.config.annotation.Reference;
-import org.springframework.beans.factory.annotation.Autowired;
 
 
 import org.springframework.stereotype.Service;
@@ -42,35 +41,6 @@ public class ClassBiz {
     StudentGradesService studentGradesService;
     @Reference(version="1.0.0")
     StudentGradesCardService studentGradesCardService;
-
-    /**
-     * 查询所有班级，
-     * @param page:当前页数
-     * @param limit：每页显示的数据数
-     * @return
-     */
-    public String allClass(int page, int limit){
-
-        try{
-            //如果操作成功，向前台返回数据
-
-
-            int count = classService.countSClass();
-            //使用分页助手进行分页
-            PageHelper.startPage(page,limit);
-            List<SClass> classlist = classService.listSClass();
-
-            List resultList = PageHelperUtils.getResultList(classlist);
-            String result =  JsonUtils.createResultJson(ResultType.SimpleResultType.SUCCESS,count,resultList).toJSONString();
-            return result;
-        }catch(Exception e){
-            //操作异常，返回错误提示
-            String result =   JsonUtils.createResultJson(ResultType.SimpleResultType.ERROR).toJSONString();
-            return result;
-        }
-
-
-    }
 
 
     /**
@@ -139,7 +109,6 @@ public class ClassBiz {
         }
         int count = studentGradesCustomVOList.size();
 
-
         //用Pagehelper分页助手进行分页
         PageHelper.startPage(page,limit);
 
@@ -148,7 +117,6 @@ public class ClassBiz {
         String result =  JsonUtils.createResultJson(ResultType.SimpleResultType.SUCCESS,count,resultList).toJSONString();
 
         return result;
-
 
     }
 

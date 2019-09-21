@@ -1,6 +1,8 @@
 package com.braisedpanda.student.management.system.web.controller;
 
 
+import com.braisedpanda.student.management.system.commons.utils.JsonUtils;
+import com.braisedpanda.student.management.system.commons.utils.ResultType;
 import com.braisedpanda.student.management.system.grades.service.GradesService;
 import com.braisedpanda.student.management.system.sclass.model.SClass;
 import com.braisedpanda.student.management.system.sclass.service.ClassService;
@@ -48,8 +50,10 @@ public class ClassController {
     @RequestMapping("class/all")
     public @ResponseBody
     String allClass2(int page, int limit){
+        int count = classService.countSClass();
+        List<SClass> resultList = classService.pageClass(page,limit);
 
-       String  result = classBiz.allClass(page,limit);
+       String  result = JsonUtils.createResultJson(ResultType.SimpleResultType.SUCCESS,count,resultList).toJSONString();
 
         return result;
 

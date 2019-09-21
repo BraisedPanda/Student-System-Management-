@@ -2,8 +2,10 @@ package com.braisedpanda.student.management.system.user.service;
 
 
 
+import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
 import com.braisedpanda.student.management.system.user.mapper.UserMapper;
 import com.braisedpanda.student.management.system.user.model.po.User;
+import com.github.pagehelper.PageHelper;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -111,5 +113,15 @@ public class UserServiceImpl implements UserService {
         return count;
 
 
+    }
+    /**
+    * @Description: 分页查询所有用户
+    * @author: chenzhen
+    * @Date: 2019/9/21 0021
+    */
+    public List<User> pageUser(int page, int limit) {
+        PageHelper.startPage(page,limit);
+        List<User> userList = userMapper.selectAll();
+        return PageHelperUtils.getResultList(userList);
     }
 }

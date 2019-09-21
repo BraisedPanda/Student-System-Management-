@@ -16,13 +16,8 @@ public interface PermissionService {
     //根据权限的id值，查询对应的权限
     Permission getPermissionById(String permissionId);
 
-
-
-
-
-
-
-
-
-
+    //分页查询permission
+    List<Permission> pagePermission(int page, int limit);
+    //查询权限的总数
+    int countPermission();
 }

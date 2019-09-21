@@ -1,6 +1,6 @@
 package com.braisedpanda.student.management.system.web.controller;
 
-
+import com.braisedpanda.student.management.system.grades.service.ClassGradesService;
 import com.braisedpanda.student.management.system.grades.service.GradesService;
 import com.braisedpanda.student.management.system.sclass.service.ClassService;
 import com.braisedpanda.student.management.system.student.service.NationService;
@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 
 @Controller
@@ -29,6 +30,8 @@ public class GradesController {
     GradesService gradesService;
     @Reference(version = "1.0.0")
     ClassService classService;
+    @Reference(version = "1.0.0")
+    ClassGradesService classGradesService;
     @Autowired
     GradesBiz gradesBiz;
     @Autowired
@@ -101,8 +104,9 @@ public class GradesController {
     @ResponseBody
     @RequestMapping("classgrades")
     public String classgrades2(int page,int limit){
-        String result = gradesBiz.classgrades(page,limit);
-
+        int count = classGradesService.countClassGrades();
+        List classGradesList = classGradesService.pageClassGrades(page,limit);
+        String result = gradesBiz.setClassGrades(classGradesList,page,limit,count);
         return result;
 
     }

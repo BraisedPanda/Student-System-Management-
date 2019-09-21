@@ -1,6 +1,8 @@
 package com.braisedpanda.student.management.system.web.controller;
 
 
+import com.braisedpanda.student.management.system.commons.utils.JsonUtils;
+import com.braisedpanda.student.management.system.commons.utils.ResultType;
 import com.braisedpanda.student.management.system.permission.model.po.Permission;
 import com.braisedpanda.student.management.system.permission.model.po.Role;
 import com.braisedpanda.student.management.system.permission.model.po.RolePermission;
@@ -164,9 +166,10 @@ public class PermissionController {
     //查询表rolePermission表中所有内容
     @RequestMapping("allpermission")
     public @ResponseBody String allpermission2(int page,int limit){
+        int count = rolePermissionService.countRolePermission();
+        List<Permission> resultList = rolePermissionService.pagePermission(page,limit);
 
-        String result = permissionBiz.allpermission(page,limit);
-
+        String result =  JsonUtils.createResultJson(ResultType.SimpleResultType.SUCCESS,count,resultList).toJSONString();
         return result;
 
     }
@@ -226,9 +229,9 @@ public class PermissionController {
     //查询表role表中所有内容
     @RequestMapping("allrole")
     public @ResponseBody String allrole2(int page,int limit){
-
-        String result = permissionBiz.allrole(page,limit);
-
+        int count = roleService.countRole();
+        List<Role> resultList = roleService.pageRole(page,limit);
+        String result =  JsonUtils.createResultJson(ResultType.SimpleResultType.SUCCESS,count,resultList).toJSONString();
         return result;
 
     }

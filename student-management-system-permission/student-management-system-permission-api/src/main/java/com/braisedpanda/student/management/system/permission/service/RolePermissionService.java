@@ -1,6 +1,7 @@
 package com.braisedpanda.student.management.system.permission.service;
 
 
+import com.braisedpanda.student.management.system.permission.model.po.Permission;
 import com.braisedpanda.student.management.system.permission.model.po.RolePermission;
 import org.apache.dubbo.config.annotation.Service;
 
@@ -30,4 +31,6 @@ public interface RolePermissionService {
     List<String> getPermission(String uid);
     //统计rolePermission表中所有的记录数
     int countRolePermission();
+    //分页查询rolePermission
+    List<Permission> pagePermission(int page, int limit);
 }

@@ -7,9 +7,9 @@ import com.braisedpanda.student.management.system.permission.service.PermissionS
 import com.braisedpanda.student.management.system.permission.service.UserRoleService;
 import com.braisedpanda.student.management.system.user.model.po.User;
 import com.braisedpanda.student.management.system.user.service.UserService;
-import com.braisedpanda.student.management.system.web.utils.JsonUtils;
-import com.braisedpanda.student.management.system.web.utils.PageHelperUtils;
-import com.braisedpanda.student.management.system.web.utils.ResultType;
+import com.braisedpanda.student.management.system.commons.utils.JsonUtils;
+import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
+import com.braisedpanda.student.management.system.commons.utils.ResultType;
 import com.github.pagehelper.PageHelper;
 
 import org.apache.dubbo.config.annotation.Reference;
@@ -42,49 +42,7 @@ public class UserBiz {
     UserRoleService userRoleService;
 
 
-    /**
-     * 用户角色表（userrole）
-     * 查找userrole表中数据，在前台进行展示
-     * @param page
-     * @param limit
 
-     */
-    public  String testtable(int page,int limit){
-
-        int count = userService.countUser();
-        PageHelper.startPage(page,limit);
-        List<User> userList1 = userService.listUsers();
-
-        for (User user:
-                userList1) {
-            List<UserRole> userRoleList = userRoleService.getUserRoleByUid(user.getUid());
-            StringBuffer sb = new StringBuffer();
-            //如果没有角色，追加【无角色】样式
-            if(userRoleList ==null || userRoleList.size()==0){
-//                user.setRoleList("无角色");
-
-            }
-            else {
-                for (UserRole userRole :
-                        userRoleList) {
-                    sb.append("【");
-                    sb.append(userRole.getRole());
-                    sb.append("】");
-
-                }
-//                user.setRoleList(sb.toString());
-            }
-
-
-
-        }
-        List resultList = PageHelperUtils.getResultList(userList1);
-        String result =  JsonUtils.createResultJson(ResultType.SimpleResultType.SUCCESS,count,resultList).toJSONString();
-
-
-        return result;
-
-    }
 
 
     /**

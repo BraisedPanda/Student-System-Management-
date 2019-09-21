@@ -29,4 +29,6 @@ public interface ClassService {
     List<String> listClassId();
     //统计出班级的数目
     int countSClass();
+
+    List<SClass> pageClass(int page,int limit);
 }

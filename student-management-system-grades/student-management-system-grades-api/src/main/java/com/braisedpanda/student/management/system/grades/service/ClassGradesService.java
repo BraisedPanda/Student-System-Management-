@@ -15,4 +15,6 @@ public interface ClassGradesService {
 
     //插入班级成绩
     void insertClassGrades(ClassGrades ClassGrades);
+    //分页查询班级成绩
+    List<ClassGrades> pageClassGrades(int page,int limit);
 }

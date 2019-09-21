@@ -1,8 +1,10 @@
 package com.braisedpanda.student.management.system.sclass.service;
 
 
+import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
 import com.braisedpanda.student.management.system.sclass.mapper.ClassMapper;
 import com.braisedpanda.student.management.system.sclass.model.SClass;
+import com.github.pagehelper.PageHelper;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -98,5 +100,16 @@ public class ClassServiceImpl implements ClassService {
         SClass c = new SClass();
         int count = classMapper.selectCount(c);
         return count;
+    }
+
+    /**
+    * @Description: 分页查询班级
+    * @author: chenzhen
+    * @Date: 2019/9/21 0021
+    */
+    public List<SClass> pageClass(int page, int limit) {
+        PageHelper.startPage(page,limit);
+        List<SClass> sClassList = classMapper.selectAll();
+        return PageHelperUtils.getResultList(sClassList);
     }
 }

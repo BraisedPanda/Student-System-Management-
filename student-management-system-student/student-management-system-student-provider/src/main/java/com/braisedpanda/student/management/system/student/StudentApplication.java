@@ -1,7 +1,9 @@
 package com.braisedpanda.student.management.system.student;
 
+import com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import tk.mybatis.spring.annotation.MapperScan;
 
@@ -14,6 +16,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @EnableAutoConfiguration
 @EnableDiscoveryClient
 @MapperScan("com.braisedpanda.student.management.system.student.mapper")
+
 public class StudentApplication {
     public static void main(String[] args) {
         SpringApplication.run(StudentApplication.class,args);

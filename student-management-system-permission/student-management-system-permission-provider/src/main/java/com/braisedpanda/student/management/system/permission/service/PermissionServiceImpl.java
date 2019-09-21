@@ -1,8 +1,10 @@
 package com.braisedpanda.student.management.system.permission.service;
 
 
+import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
 import com.braisedpanda.student.management.system.permission.mapper.PermissionMapper;
 import com.braisedpanda.student.management.system.permission.model.po.Permission;
+import com.github.pagehelper.PageHelper;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -42,7 +44,19 @@ public class PermissionServiceImpl implements PermissionService {
 
     }
 
+    /**
+    * @Description: 分页查询permission表
+    * @author: chenzhen
+    * @Date: 2019/9/21 0021
+    */
+    public List<Permission> pagePermission(int page, int limit) {
+        PageHelper.startPage(page,limit);
+        List<Permission> permissionList = permissionMapper.selectAll();
+        return PageHelperUtils.getResultList(permissionList);
+    }
 
-
-
+    public int countPermission() {
+        Permission permission =new Permission();
+        return permissionMapper.selectCount(permission);
+    }
 }

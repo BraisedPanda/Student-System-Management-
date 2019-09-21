@@ -1,4 +1,4 @@
-package com.braisedpanda.student.management.system.web.utils;
+package com.braisedpanda.student.management.system.commons.utils;
 
 public interface ResultType {
 
@@ -55,13 +55,12 @@ public interface ResultType {
         }
 
 
-        @Override
+
         public int getResultCode() {
             return this.resultCode;
         }
 
 
-        @Override
         public String getResultMsg() {
             return this.resultMsg;
         }

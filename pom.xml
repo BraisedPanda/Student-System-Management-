@@ -36,6 +36,7 @@
         <module>student-management-system-student</module>
         <module>student-management-system-class</module>
         <module>student-management-system-grades</module>
+        <module>student-management-system-commons</module>
 
 
     </modules>
@@ -100,7 +101,7 @@
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>1.2.3</version>
+            <version>1.2.12</version>
         </dependency>
         <dependency>
             <groupId>com.github.pagehelper</groupId>

@@ -7,14 +7,13 @@ import com.braisedpanda.student.management.system.permission.service.PermissionS
 import com.braisedpanda.student.management.system.permission.service.RolePermissionService;
 import com.braisedpanda.student.management.system.permission.service.RoleService;
 import com.braisedpanda.student.management.system.user.service.UserService;
-import com.braisedpanda.student.management.system.web.utils.JsonUtils;
-import com.braisedpanda.student.management.system.web.utils.PageHelperUtils;
-import com.braisedpanda.student.management.system.web.utils.ResultType;
+import com.braisedpanda.student.management.system.commons.utils.JsonUtils;
+import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
+import com.braisedpanda.student.management.system.commons.utils.ResultType;
 import com.github.pagehelper.PageHelper;
 
 import com.github.pagehelper.PageInfo;
 import org.apache.dubbo.config.annotation.Reference;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 
@@ -77,28 +76,6 @@ public class PermissionBiz {
     }
 
 
-    /**
-    * @Description: 查询表rolePermission表中所有内容
-    * @Param:
-    * @return:
-    * @Date: 2019/8/26 0026
-    */
-    public String allpermission(int page,int limit){
-
-
-        int count = rolePermissionService.countRolePermission();
-
-        PageHelper.startPage(page,limit);
-        List<RolePermission> rolePermissionList1 = rolePermissionService.listRolePermission();
-
-        List resultList = PageHelperUtils.getResultList(rolePermissionList1);
-
-        String result =  JsonUtils.createResultJson(ResultType.SimpleResultType.SUCCESS,count,resultList).toJSONString();
-
-
-        return result;
-
-    }
 
 
     /**
