@@ -45,6 +45,15 @@ spring:
         test-while-idle: true
         test-on-borrow: false
         test-on-return: false
+##pagehelper配置
+pagehelper:
+    params: count=countSql
+    reasonable: true
+    support-methods-arguments: true
+
+    helper-dialect: mysql
+
+
 
 server:
   port: 8100

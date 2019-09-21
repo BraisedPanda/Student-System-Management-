@@ -1,6 +1,7 @@
 package com.braisedpanda.student.management.system.web;
 
 
+import com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -14,7 +15,7 @@ import org.springframework.cloud.openfeign.FeignAutoConfiguration;
  * @author: chenzhen
  * @create: 2019-09-20 14:10
  **/
-@SpringBootApplication(exclude = {FeignAutoConfiguration.class, DataSourceAutoConfiguration.class})
+@SpringBootApplication(exclude = {FeignAutoConfiguration.class, DataSourceAutoConfiguration.class} )
 @EnableDiscoveryClient
 public class WebApplication {
     public static void main(String[] args) {

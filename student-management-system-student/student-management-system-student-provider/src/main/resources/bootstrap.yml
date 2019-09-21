@@ -1,0 +1,47 @@
+##应用名称
+spring:
+  main:
+      allow-bean-definition-overriding: true
+#    profiles:
+#       active: public
+  cloud:
+    nacos:
+        discovery:
+         server-addr: ${spring.cloud.nacos.config.server-addr}
+         namespace: ${spring.cloud.nacos.config.namespace}
+        config:
+          server-addr: 47.98.135.254:8848
+          group: provider
+          namespace: ac936854-b64c-438a-b55c-3271e3dde018
+          file-extension: yaml
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      name: druidDataSource
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/studentsystem?serverTimezone=UTC
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      max-active: 20
+      initial-size: 1
+      use-global-data-source-stat: true
+      min-idle: 1
+      max-wait: 60000
+      max-open-prepared-statements: 20
+      pool-prepared-statements: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+
+
+##pagehelper配置
+pagehelper:
+    helper-dialect: mysql
+    params: count=countSql
+    reasonable: true
+    support-methods-arguments: true
+server:
+  port: 8003

@@ -24,7 +24,7 @@ public class ShiroConfig {
         //这里是没有授权时，跳转的界面
         shiroFilterFactoryBean.setUnauthorizedUrl("/notRole");
 
-        Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
+        Map<String, String> filterChainDefinitionMap = new LinkedHashMap();
 
         filterChainDefinitionMap.put("/webjars/**", "anon");
         filterChainDefinitionMap.put("/login", "anon");

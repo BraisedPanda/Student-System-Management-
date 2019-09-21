@@ -2,9 +2,18 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student-management-system-class" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student-management-system-class/student-management-system-class-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student-management-system-class/student-management-system-class-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student-management-system-grades" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student-management-system-grades/student-management-system-grades-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student-management-system-grades/student-management-system-grades-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student-management-system-permission" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student-management-system-permission/student-management-system-permission-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student-management-system-permission/student-management-system-permission-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student-management-system-student" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student-management-system-student/student-management-system-student-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/student-management-system-student/student-management-system-student-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student-management-system-user" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student-management-system-user/student-management-system-user-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/student-management-system-user/student-management-system-user-provider" charset="UTF-8" />
