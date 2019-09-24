@@ -3,7 +3,7 @@ package com.braisedpanda.student.management.system.sclass.service;
 
 import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
 import com.braisedpanda.student.management.system.sclass.mapper.ClassMapper;
-import com.braisedpanda.student.management.system.sclass.model.SClass;
+import com.braisedpanda.student.management.system.domain.model
 import com.github.pagehelper.PageHelper;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;

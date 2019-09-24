@@ -3,7 +3,7 @@ package com.braisedpanda.student.management.system.permission.service;
 
 import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
 import com.braisedpanda.student.management.system.permission.mapper.PermissionMapper;
-import com.braisedpanda.student.management.system.permission.model.po.Permission;
+import com.braisedpanda.student.management.system.domain.model.Permission;
 import com.github.pagehelper.PageHelper;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,4 +59,6 @@ public class PermissionServiceImpl implements PermissionService {
         Permission permission =new Permission();
         return permissionMapper.selectCount(permission);
     }
+
+
 }

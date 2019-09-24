@@ -2,7 +2,7 @@ package com.braisedpanda.student.management.system.permission.mapper;
 
 
 
-import com.braisedpanda.student.management.system.permission.model.po.Permission;
+import com.braisedpanda.student.management.system.domain.model.Permission;
 import org.apache.ibatis.annotations.Mapper;
 
 

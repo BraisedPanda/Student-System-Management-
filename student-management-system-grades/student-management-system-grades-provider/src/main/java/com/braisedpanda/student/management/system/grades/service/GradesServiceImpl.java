@@ -2,7 +2,7 @@ package com.braisedpanda.student.management.system.grades.service;
 
 
 import com.braisedpanda.student.management.system.grades.mapper.GradesMapper;
-import com.braisedpanda.student.management.system.grades.model.po.StudentGradesCard;
+import com.braisedpanda.student.management.system.domain.model.StudentGradesCard;
 import com.braisedpanda.student.management.system.grades.model.vo.StudentGradesCustomVO;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;

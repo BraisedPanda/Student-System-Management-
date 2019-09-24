@@ -1,7 +1,6 @@
 package com.braisedpanda.student.management.system.permission.service;
 
-import com.braisedpanda.student.management.system.permission.model.po.Role;
-import org.springframework.stereotype.Service;
+import com.braisedpanda.student.management.system.domain.model.Role;
 
 import java.util.List;
 

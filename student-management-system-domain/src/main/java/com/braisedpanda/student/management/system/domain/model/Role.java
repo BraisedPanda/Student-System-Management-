@@ -1,4 +1,4 @@
-package com.braisedpanda.student.management.system.permission.model.po;
+package com.braisedpanda.student.management.system.domain.model;
 
 import lombok.Data;
 

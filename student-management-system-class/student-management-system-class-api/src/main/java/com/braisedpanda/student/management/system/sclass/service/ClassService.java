@@ -1,8 +1,8 @@
 package com.braisedpanda.student.management.system.sclass.service;
 
 
+import com.braisedpanda.student.management.system.domain.model.SClass;
 
-import com.braisedpanda.student.management.system.sclass.model.SClass;
 
 import java.util.List;
 

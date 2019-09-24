@@ -1,7 +1,7 @@
 package com.braisedpanda.student.management.system.permission.mapper;
 
 
-import com.braisedpanda.student.management.system.permission.model.po.RolePermission;
+import com.braisedpanda.student.management.system.domain.model.RolePermission;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

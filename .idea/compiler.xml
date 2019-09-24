@@ -9,6 +9,7 @@
         <module name="student-management-system-class-api" />
         <module name="student-management-system-class-provider" />
         <module name="student-management-system-commons" />
+        <module name="student-management-system-domain" />
         <module name="student-management-system-grades-api" />
         <module name="student-management-system-grades-provider" />
         <module name="student-management-system-permission-api" />
@@ -26,6 +27,7 @@
       <module name="student-management-system-class-api" target="1.5" />
       <module name="student-management-system-class-provider" target="1.5" />
       <module name="student-management-system-commons" target="1.5" />
+      <module name="student-management-system-domain" target="1.5" />
       <module name="student-management-system-grades" target="1.5" />
       <module name="student-management-system-grades-api" target="1.5" />
       <module name="student-management-system-grades-provider" target="1.5" />

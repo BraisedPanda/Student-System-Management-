@@ -1,6 +1,6 @@
 package com.braisedpanda.student.management.system.student.service;
 
-import com.braisedpanda.student.management.system.student.model.po.Nation;
+import com.braisedpanda.student.management.system.domain.model.Nation;
 
 import java.util.List;
 

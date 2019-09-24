@@ -2,11 +2,11 @@ package com.braisedpanda.student.management.system.web.config;
 
 
 
-import com.braisedpanda.student.management.system.permission.model.po.UserRole;
+import com.braisedpanda.student.management.system.domain.model.UserRole;
 import com.braisedpanda.student.management.system.permission.service.PermissionService;
 import com.braisedpanda.student.management.system.permission.service.RolePermissionService;
 import com.braisedpanda.student.management.system.permission.service.UserRoleService;
-import com.braisedpanda.student.management.system.user.model.po.User;
+import com.braisedpanda.student.management.system.domain.model.User;
 import com.braisedpanda.student.management.system.user.service.UserService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.apache.shiro.authc.*;

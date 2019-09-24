@@ -1,11 +1,10 @@
-package com.braisedpanda.student.management.system.student.model.po;
+package com.braisedpanda.student.management.system.domain.model;
 
 import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import java.io.Serializable;
 @Data
 @Table(name="student")

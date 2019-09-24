@@ -1,7 +1,7 @@
 package com.braisedpanda.student.management.system.grades.service;
 
 
-import com.braisedpanda.student.management.system.grades.model.po.StudentGrades;
+import com.braisedpanda.student.management.system.domain.model.StudentGrades;
 
 public interface StudentGradesService {
 

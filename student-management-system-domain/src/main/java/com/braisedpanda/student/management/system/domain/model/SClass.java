@@ -1,13 +1,12 @@
-package com.braisedpanda.student.management.system.sclass.model;
+package com.braisedpanda.student.management.system.domain.model;
 
 import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import java.io.Serializable;
-import java.util.List;
+
 @Data
 @Table(name="class")
 public class SClass implements Serializable{

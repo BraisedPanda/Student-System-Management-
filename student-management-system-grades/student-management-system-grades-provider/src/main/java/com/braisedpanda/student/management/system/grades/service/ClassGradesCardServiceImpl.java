@@ -1,7 +1,7 @@
 package com.braisedpanda.student.management.system.grades.service;
 
 import com.braisedpanda.student.management.system.grades.mapper.ClassGradesCardMapper;
-import com.braisedpanda.student.management.system.grades.model.po.ClassGradesCard;
+import com.braisedpanda.student.management.system.domain.model.ClassGradesCard;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 

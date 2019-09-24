@@ -4,7 +4,9 @@ package com.braisedpanda.student.management.system.web.controller;
 
 import com.braisedpanda.student.management.system.commons.utils.JsonUtils;
 import com.braisedpanda.student.management.system.commons.utils.ResultType;
-import com.braisedpanda.student.management.system.user.model.po.User;
+import com.braisedpanda.student.management.system.permission.service.UserRoleService;
+import com.braisedpanda.student.management.system.domain.model.User;
+import com.braisedpanda.student.management.system.permission.model.vo.UserVO;
 import com.braisedpanda.student.management.system.user.service.UserService;
 
 import com.braisedpanda.student.management.system.web.biz.UserBiz;
@@ -30,7 +32,8 @@ public class UserController {
 
     @Reference(version = "1.0.0")
     UserService userService;
-
+    @Reference(version="1.0.0")
+    UserRoleService userRoleService;
 
     @Autowired
     UserBiz userBiz;
@@ -191,8 +194,9 @@ public class UserController {
     @RequestMapping("user/table")
     public @ResponseBody String testtable2(int page,int limit){
         int count = userService.countUser();
-        List<User> resultList = userService.pageUser(page,limit);
+        List<User> userList = userService.pageUser(page,limit);
 
+        List<UserVO> resultList = userRoleService.pageUser(userList);
        String result = JsonUtils.createResultJson(ResultType.SimpleResultType.SUCCESS,count,resultList).toJSONString();
 
         return result;

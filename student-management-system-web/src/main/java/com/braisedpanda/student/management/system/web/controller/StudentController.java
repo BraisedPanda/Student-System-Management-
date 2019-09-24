@@ -1,11 +1,12 @@
 package com.braisedpanda.student.management.system.web.controller;
 
+import com.braisedpanda.student.management.system.domain.model.SClass;
 import com.braisedpanda.student.management.system.grades.service.GradesService;
 import com.braisedpanda.student.management.system.permission.service.PermissionService;
-import com.braisedpanda.student.management.system.sclass.model.SClass;
+
 import com.braisedpanda.student.management.system.sclass.service.ClassService;
-import com.braisedpanda.student.management.system.student.model.po.Nation;
-import com.braisedpanda.student.management.system.student.model.po.Student;
+import com.braisedpanda.student.management.system.domain.model.Nation;
+import com.braisedpanda.student.management.system.domain.model.Student;
 import com.braisedpanda.student.management.system.student.service.NationService;
 import com.braisedpanda.student.management.system.student.service.StudentService;
 import com.braisedpanda.student.management.system.user.service.UserService;

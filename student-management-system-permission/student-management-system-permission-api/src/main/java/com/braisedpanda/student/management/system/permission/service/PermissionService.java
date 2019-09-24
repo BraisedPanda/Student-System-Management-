@@ -1,7 +1,8 @@
 package com.braisedpanda.student.management.system.permission.service;
 
 
-import com.braisedpanda.student.management.system.permission.model.po.Permission;
+import com.braisedpanda.student.management.system.domain.model.Permission;
+
 import org.apache.dubbo.config.annotation.Service;
 
 import java.util.List;
@@ -20,4 +21,6 @@ public interface PermissionService {
     List<Permission> pagePermission(int page, int limit);
     //查询权限的总数
     int countPermission();
+
+
 }

@@ -37,6 +37,7 @@
         <module>student-management-system-class</module>
         <module>student-management-system-grades</module>
         <module>student-management-system-commons</module>
+        <module>student-management-system-domain</module>
 
 
     </modules>

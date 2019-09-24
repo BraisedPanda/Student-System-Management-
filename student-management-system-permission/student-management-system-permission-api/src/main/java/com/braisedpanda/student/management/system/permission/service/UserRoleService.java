@@ -2,7 +2,9 @@ package com.braisedpanda.student.management.system.permission.service;
 
 
 
-import com.braisedpanda.student.management.system.permission.model.po.UserRole;
+import com.braisedpanda.student.management.system.domain.model.UserRole;
+import com.braisedpanda.student.management.system.domain.model.User;
+import com.braisedpanda.student.management.system.permission.model.vo.UserVO;
 import org.apache.dubbo.config.annotation.Service;
 
 import java.util.List;
@@ -19,4 +21,7 @@ public interface UserRoleService {
 
     //删除userRole表中所有uid用户
     void deleteRoleByUid(int uid);
+
+
+    List<UserVO> pageUser(List<User> userList);
 }

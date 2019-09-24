@@ -2,7 +2,7 @@ package com.braisedpanda.student.management.system.grades.service;
 
 
 import com.braisedpanda.student.management.system.grades.mapper.StudentGradesMapper;
-import com.braisedpanda.student.management.system.grades.model.po.StudentGrades;
+import com.braisedpanda.student.management.system.domain.model.StudentGrades;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 

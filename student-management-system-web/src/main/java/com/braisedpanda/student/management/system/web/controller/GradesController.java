@@ -5,7 +5,7 @@ import com.braisedpanda.student.management.system.grades.service.GradesService;
 import com.braisedpanda.student.management.system.sclass.service.ClassService;
 import com.braisedpanda.student.management.system.student.service.NationService;
 import com.braisedpanda.student.management.system.student.service.StudentService;
-import com.braisedpanda.student.management.system.user.model.po.User;
+import com.braisedpanda.student.management.system.domain.model.User;
 import com.braisedpanda.student.management.system.web.biz.ClassBiz;
 import com.braisedpanda.student.management.system.web.biz.GradesBiz;
 import org.apache.dubbo.config.annotation.Reference;

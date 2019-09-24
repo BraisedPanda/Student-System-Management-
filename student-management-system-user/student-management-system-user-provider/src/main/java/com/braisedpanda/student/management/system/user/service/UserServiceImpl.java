@@ -3,9 +3,12 @@ package com.braisedpanda.student.management.system.user.service;
 
 
 import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
+
 import com.braisedpanda.student.management.system.user.mapper.UserMapper;
-import com.braisedpanda.student.management.system.user.model.po.User;
+import com.braisedpanda.student.management.system.domain.model.User;
+
 import com.github.pagehelper.PageHelper;
+
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,6 +20,7 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Autowired
     UserMapper userMapper;
+
 
     /**
     * @Description: 查找所有的用户
@@ -109,7 +113,7 @@ public class UserServiceImpl implements UserService {
     public int countUser() {
         User t = new User();
         int count = userMapper.selectCount(t);
-        System.out.println("学生人数："+count);
+
         return count;
 
 
@@ -122,6 +126,7 @@ public class UserServiceImpl implements UserService {
     public List<User> pageUser(int page, int limit) {
         PageHelper.startPage(page,limit);
         List<User> userList = userMapper.selectAll();
+
         return PageHelperUtils.getResultList(userList);
     }
 }

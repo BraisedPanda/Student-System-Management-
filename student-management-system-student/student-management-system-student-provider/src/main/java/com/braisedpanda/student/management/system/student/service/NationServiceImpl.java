@@ -2,7 +2,7 @@ package com.braisedpanda.student.management.system.student.service;
 
 
 import com.braisedpanda.student.management.system.student.mapper.NationMapper;
-import com.braisedpanda.student.management.system.student.model.po.Nation;
+import com.braisedpanda.student.management.system.domain.model.Nation;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 

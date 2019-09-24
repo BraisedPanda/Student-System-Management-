@@ -2,7 +2,7 @@ package com.braisedpanda.student.management.system.permission.service;
 
 import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
 import com.braisedpanda.student.management.system.permission.mapper.RoleMapper;
-import com.braisedpanda.student.management.system.permission.model.po.Role;
+import com.braisedpanda.student.management.system.domain.model.Role;
 import com.github.pagehelper.PageHelper;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;

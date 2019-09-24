@@ -1,7 +1,7 @@
 package com.braisedpanda.student.management.system.student.mapper;
 
 
-import com.braisedpanda.student.management.system.student.model.po.Student;
+import com.braisedpanda.student.management.system.domain.model.Student;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

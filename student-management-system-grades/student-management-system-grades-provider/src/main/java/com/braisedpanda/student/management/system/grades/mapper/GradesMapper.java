@@ -1,7 +1,7 @@
 package com.braisedpanda.student.management.system.grades.mapper;
 
 
-import com.braisedpanda.student.management.system.grades.model.po.StudentGradesCard;
+import com.braisedpanda.student.management.system.domain.model.StudentGradesCard;
 import com.braisedpanda.student.management.system.grades.model.vo.StudentGradesCustomVO;
 import org.apache.ibatis.annotations.Mapper;
 

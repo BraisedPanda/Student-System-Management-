@@ -16,5 +16,11 @@
         <module>student-management-system-grades-provider</module>
     </modules>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.braisedpanda</groupId>
+            <artifactId>student-management-system-domain</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

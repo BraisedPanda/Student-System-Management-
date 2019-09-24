@@ -1,14 +1,13 @@
 package com.braisedpanda.student.management.system.web.biz;
 
-import com.braisedpanda.student.management.system.permission.model.po.Permission;
-import com.braisedpanda.student.management.system.permission.model.po.Role;
-import com.braisedpanda.student.management.system.permission.model.po.RolePermission;
+import com.braisedpanda.student.management.system.domain.model.Permission;
+import com.braisedpanda.student.management.system.domain.model.Role;
+import com.braisedpanda.student.management.system.domain.model.RolePermission;
 import com.braisedpanda.student.management.system.permission.service.PermissionService;
 import com.braisedpanda.student.management.system.permission.service.RolePermissionService;
 import com.braisedpanda.student.management.system.permission.service.RoleService;
 import com.braisedpanda.student.management.system.user.service.UserService;
 import com.braisedpanda.student.management.system.commons.utils.JsonUtils;
-import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
 import com.braisedpanda.student.management.system.commons.utils.ResultType;
 import com.github.pagehelper.PageHelper;
 

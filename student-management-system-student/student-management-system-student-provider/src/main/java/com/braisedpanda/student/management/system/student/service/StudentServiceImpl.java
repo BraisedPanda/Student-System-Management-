@@ -2,7 +2,7 @@ package com.braisedpanda.student.management.system.student.service;
 
 
 import com.braisedpanda.student.management.system.student.mapper.StudentMapper;
-import com.braisedpanda.student.management.system.student.model.po.Student;
+import com.braisedpanda.student.management.system.domain.model.Student;
 import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
 import com.github.pagehelper.PageHelper;
 import org.apache.dubbo.config.annotation.Service;

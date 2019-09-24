@@ -1,15 +1,16 @@
 package com.braisedpanda.student.management.system.web.biz;
 
 
-import com.braisedpanda.student.management.system.grades.model.po.StudentGrades;
-import com.braisedpanda.student.management.system.grades.model.po.StudentGradesCard;
+import com.braisedpanda.student.management.system.domain.model.SClass;
+import com.braisedpanda.student.management.system.domain.model.StudentGrades;
+import com.braisedpanda.student.management.system.domain.model.StudentGradesCard;
 import com.braisedpanda.student.management.system.grades.model.vo.StudentGradesCustomVO;
 import com.braisedpanda.student.management.system.grades.service.GradesService;
 import com.braisedpanda.student.management.system.grades.service.StudentGradesCardService;
 import com.braisedpanda.student.management.system.grades.service.StudentGradesService;
-import com.braisedpanda.student.management.system.sclass.model.SClass;
+
 import com.braisedpanda.student.management.system.sclass.service.ClassService;
-import com.braisedpanda.student.management.system.student.model.po.Student;
+import com.braisedpanda.student.management.system.domain.model.Student;
 import com.braisedpanda.student.management.system.student.service.NationService;
 import com.braisedpanda.student.management.system.student.service.StudentService;
 import com.braisedpanda.student.management.system.commons.utils.JsonUtils;

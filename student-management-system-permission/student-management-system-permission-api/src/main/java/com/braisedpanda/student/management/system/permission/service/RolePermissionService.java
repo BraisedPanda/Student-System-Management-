@@ -1,8 +1,8 @@
 package com.braisedpanda.student.management.system.permission.service;
 
 
-import com.braisedpanda.student.management.system.permission.model.po.Permission;
-import com.braisedpanda.student.management.system.permission.model.po.RolePermission;
+import com.braisedpanda.student.management.system.domain.model.Permission;
+import com.braisedpanda.student.management.system.domain.model.RolePermission;
 import org.apache.dubbo.config.annotation.Service;
 
 import java.util.List;

@@ -1,6 +1,7 @@
 package com.braisedpanda.student.management.system.user.service;
 
-import com.braisedpanda.student.management.system.user.model.po.User;
+import com.braisedpanda.student.management.system.domain.model.User;
+
 
 
 import java.util.List;

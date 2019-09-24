@@ -2,7 +2,7 @@ package com.braisedpanda.student.management.system.grades.service;
 
 
 
-import com.braisedpanda.student.management.system.grades.model.po.ClassGrades;
+import com.braisedpanda.student.management.system.domain.model.ClassGrades;
 
 import java.util.List;
 

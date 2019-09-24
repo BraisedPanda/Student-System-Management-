@@ -3,8 +3,9 @@ package com.braisedpanda.student.management.system.web.controller;
 
 import com.braisedpanda.student.management.system.commons.utils.JsonUtils;
 import com.braisedpanda.student.management.system.commons.utils.ResultType;
+import com.braisedpanda.student.management.system.domain.model.SClass;
 import com.braisedpanda.student.management.system.grades.service.GradesService;
-import com.braisedpanda.student.management.system.sclass.model.SClass;
+
 import com.braisedpanda.student.management.system.sclass.service.ClassService;
 import com.braisedpanda.student.management.system.student.service.NationService;
 import com.braisedpanda.student.management.system.student.service.StudentService;

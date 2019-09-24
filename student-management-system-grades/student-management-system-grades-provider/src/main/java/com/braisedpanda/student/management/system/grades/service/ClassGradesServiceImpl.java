@@ -3,15 +3,11 @@ package com.braisedpanda.student.management.system.grades.service;
 
 import com.braisedpanda.student.management.system.commons.utils.PageHelperUtils;
 import com.braisedpanda.student.management.system.grades.mapper.ClassGradesMapper;
-import com.braisedpanda.student.management.system.grades.model.po.ClassGrades;
-import com.braisedpanda.student.management.system.grades.model.po.ClassGradesCard;
-import com.braisedpanda.student.management.system.grades.model.vo.CustomClassGradesVO;
+import com.braisedpanda.student.management.system.domain.model.ClassGrades;
+import com.braisedpanda.student.management.system.domain.model.ClassGradesCard;
 import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
-import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @org.apache.dubbo.config.annotation.Service(version="1.0.0")

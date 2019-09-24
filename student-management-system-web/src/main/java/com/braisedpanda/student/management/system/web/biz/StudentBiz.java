@@ -1,18 +1,18 @@
 package com.braisedpanda.student.management.system.web.biz;
 
-import com.braisedpanda.student.management.system.grades.model.po.StudentGrades;
-import com.braisedpanda.student.management.system.grades.model.po.StudentGradesCard;
+import com.braisedpanda.student.management.system.domain.model.StudentGrades;
+import com.braisedpanda.student.management.system.domain.model.StudentGradesCard;
 import com.braisedpanda.student.management.system.grades.service.GradesService;
 import com.braisedpanda.student.management.system.grades.service.StudentGradesCardService;
 import com.braisedpanda.student.management.system.grades.service.StudentGradesService;
-import com.braisedpanda.student.management.system.permission.model.po.UserRole;
+import com.braisedpanda.student.management.system.domain.model.UserRole;
 import com.braisedpanda.student.management.system.permission.service.PermissionService;
 import com.braisedpanda.student.management.system.permission.service.UserRoleService;
 import com.braisedpanda.student.management.system.sclass.service.ClassService;
-import com.braisedpanda.student.management.system.student.model.po.Student;
+import com.braisedpanda.student.management.system.domain.model.Student;
 import com.braisedpanda.student.management.system.student.service.NationService;
 import com.braisedpanda.student.management.system.student.service.StudentService;
-import com.braisedpanda.student.management.system.user.model.po.User;
+import com.braisedpanda.student.management.system.domain.model.User;
 import com.braisedpanda.student.management.system.user.service.UserService;
 
 import org.apache.dubbo.config.annotation.Reference;
