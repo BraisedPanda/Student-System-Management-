@@ -8,6 +8,7 @@ import com.braisedpanda.student.management.system.student.service.StudentService
 import com.braisedpanda.student.management.system.domain.model.User;
 import com.braisedpanda.student.management.system.web.biz.ClassBiz;
 import com.braisedpanda.student.management.system.web.biz.GradesBiz;
+import com.braisedpanda.student.management.system.web.log.LogAnnotation;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,6 +41,7 @@ public class GradesController {
 
     //批量生成学生成绩卡数据
     @RequestMapping("insertGradesCard")
+    @LogAnnotation
     public String insertGradesCard1(){
 
         gradesBiz.insertGradesCard();
@@ -50,6 +52,7 @@ public class GradesController {
 
     //批量生成学生成绩
     @RequestMapping("insertGrades")
+    @LogAnnotation
     public void insertGrades(){
 
        gradesBiz.insertGrades();
@@ -59,6 +62,7 @@ public class GradesController {
     //查询学生成绩
     @ResponseBody
     @RequestMapping("grades/sudent/{stuId}")
+    @LogAnnotation(operateType="查询学生成绩")
     public String getStudentGrades2(@PathVariable("stuId") String stuId,int page,int limit){
 
         String result = gradesBiz.getStudentGrades(stuId,page,limit);
@@ -69,6 +73,7 @@ public class GradesController {
 
     //跳转到我的成绩
     @RequestMapping("tostudentgrades")
+    @LogAnnotation(operateType="查看我的成绩")
     public String tostudentgrades2(Model model,HttpSession session){
 
         User user = (User)session.getAttribute("user");
@@ -84,6 +89,7 @@ public class GradesController {
     //批量生成班级成绩卡
     @ResponseBody
     @RequestMapping("autoinsertClass_gardes_card")
+    @LogAnnotation
     public void autoinsertClass_gardes_card2(){
         gradesBiz.autoinsertClass_gardes_card();
 
@@ -92,6 +98,7 @@ public class GradesController {
     //批量生成班级成绩统计
     @ResponseBody
     @RequestMapping("insertClassGrades")
+    @LogAnnotation
     public void insertClassGrades2(){
 
          gradesBiz.insertClassGrades();
@@ -103,6 +110,7 @@ public class GradesController {
     //查询班级分数
     @ResponseBody
     @RequestMapping("classgrades")
+    @LogAnnotation(operateType="查询班级成绩")
     public String classgrades2(int page,int limit){
         int count = classGradesService.countClassGrades();
         List classGradesList = classGradesService.pageClassGrades(page,limit);

@@ -14,6 +14,7 @@ import com.braisedpanda.student.management.system.permission.service.UserRoleSer
 import com.braisedpanda.student.management.system.domain.model.User;
 import com.braisedpanda.student.management.system.user.service.UserService;
 import com.braisedpanda.student.management.system.web.biz.PermissionBiz;
+import com.braisedpanda.student.management.system.web.log.LogAnnotation;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -47,6 +48,7 @@ public class PermissionController {
     RolePermissionService rolePermissionService;
 
     //新增角色
+    @LogAnnotation(operateType="新增角色")
     @RequestMapping("insertRole")
     public String insertRole2(Role role, HttpServletRequest request, Model model){
         permissionBiz.insertRole(role,request);
@@ -58,6 +60,7 @@ public class PermissionController {
     }
 
     //跳转到授予权限的界面
+    @LogAnnotation(operateType="跳转到授权界面")
     @RequestMapping("toaddpermission")
     public ModelAndView  toaddpermission2(){
         ModelAndView modelAndView = new ModelAndView();
@@ -82,7 +85,7 @@ public class PermissionController {
 
     @ResponseBody
     @RequestMapping("findrolebyid/{uid}")
-
+    @LogAnnotation(operateType="根据用户查找对应的角色")
     public List<UserRole> findrolebyid(@PathVariable("uid") String uid, Model model){
         List<UserRole> userRoleList = userRoleService.getUserRoleByUid(Integer.parseInt(uid));
         User user1 = new User();
@@ -119,6 +122,7 @@ public class PermissionController {
      */
 
     @RequestMapping("addpermission")
+    @LogAnnotation(operateType="为用户添加权限")
     public String addpermission2(int uid,HttpServletRequest request,Model model){
         User user1 = new User();
         user1.setUid(uid);
@@ -165,6 +169,7 @@ public class PermissionController {
 
     //查询表rolePermission表中所有内容
     @RequestMapping("allpermission")
+    @LogAnnotation(operateType="查看角色权限表")
     public @ResponseBody String allpermission2(int page,int limit){
         int count = rolePermissionService.countRolePermission();
         List<Permission> resultList = rolePermissionService.pagePermission(page,limit);
@@ -177,6 +182,7 @@ public class PermissionController {
     //删除rolePermission中，角色所有的权限
     @ResponseBody
     @RequestMapping("permission/delete/{rPId}")
+    @LogAnnotation(operateType="删除角色权限")
     public void deleteRolePermissionById(@PathVariable("rPId")String rPId){
         RolePermission rolePermission = new RolePermission();
         rolePermission.setRPId(rPId);
@@ -185,6 +191,7 @@ public class PermissionController {
 
 
     //编辑角色对应的权限
+    @LogAnnotation
     @RequestMapping("permission/toedit/{roleId}")
     public ModelAndView permission_toedit2(@PathVariable("roleId")String roleId){
         ModelAndView modelAndView = new ModelAndView();
@@ -202,6 +209,7 @@ public class PermissionController {
 
 
     //编辑角色权限信息
+    @LogAnnotation(operateType="更改角色权限信息")
     @RequestMapping("editrolePermission")
     public String edit_role_perission2(RolePermission rolePermission, HttpServletRequest request, Model model ){
        permissionBiz.edit_role_perission(rolePermission,request);
@@ -213,6 +221,7 @@ public class PermissionController {
 
 
     //跳转到新增角色权限表
+    @LogAnnotation
     @RequestMapping("torole")
     public ModelAndView torole2(){
         ModelAndView modelAndView = new ModelAndView();
@@ -228,6 +237,7 @@ public class PermissionController {
 
     //查询表role表中所有内容
     @RequestMapping("allrole")
+    @LogAnnotation(operateType="查看所有角色")
     public @ResponseBody String allrole2(int page,int limit){
         int count = roleService.countRole();
         List<Role> resultList = roleService.pageRole(page,limit);
@@ -239,7 +249,7 @@ public class PermissionController {
     //根据roleId删除role表中的role
     @ResponseBody
     @RequestMapping("permission/deleterole/{roleId}")
-
+    @LogAnnotation(operateType="删除角色")
     public void deleterole(@PathVariable("roleId") String roleId){
         Role role = new Role();
         role.setRoleId(roleId);
@@ -249,6 +259,7 @@ public class PermissionController {
 
     //无权限时，跳转界面
     @RequestMapping("notRole")
+    @LogAnnotation
     public String testr(){
         return "menu/nopermission";
     }
@@ -256,18 +267,21 @@ public class PermissionController {
 
     //查询所有的权限
     @RequestMapping("toallpermission")
+    @LogAnnotation
     public String toallpermission(){
         return "permission/allrolePermission";
     }
 
     //跳转到所有角色
     @RequestMapping("toallrole")
+    @LogAnnotation
     public String toallrole(){
         return "permission/allrole";
     }
 
 
     //跳转到权限...
+    @LogAnnotation
     @RequestMapping("topermission")
     public String topermission(){
         return null;

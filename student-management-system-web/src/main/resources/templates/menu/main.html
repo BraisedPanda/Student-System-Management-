@@ -151,7 +151,14 @@
 
             </dl>
         </li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">查看日志</a>
+            <dl class="layui-nav-child">
 
+                <dd class="main_left"><a data-src="tologpage" target="_top">操作日志</a></dd>
+
+            </dl>
+        </li>
         <!--<li class="layui-nav-item"><a href="">大数据</a></li>-->
     </ul>
 
@@ -201,9 +208,6 @@
         });
 
         var frame = $("#aa");
-//        var top = $("#top-nav");
-//        var topheight = top.height();
-//        console.log("top高度："+topheight);
         var frameheight = $(window).height();
         console.log(frameheight);
         frame.css("height",frameheight);

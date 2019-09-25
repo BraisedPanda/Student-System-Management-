@@ -10,6 +10,7 @@ import com.braisedpanda.student.management.system.sclass.service.ClassService;
 import com.braisedpanda.student.management.system.student.service.NationService;
 import com.braisedpanda.student.management.system.student.service.StudentService;
 import com.braisedpanda.student.management.system.web.biz.ClassBiz;
+import com.braisedpanda.student.management.system.web.log.LogAnnotation;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -39,6 +40,7 @@ public class ClassController {
     //批量生成学生测试数据
     @ResponseBody
     @RequestMapping("insertClass")
+    @LogAnnotation
     public void insertClass2(){
 
        classBiz.insertClass();
@@ -50,6 +52,7 @@ public class ClassController {
     //查询所有班级
     @RequestMapping("class/all")
     public @ResponseBody
+    @LogAnnotation(operateType="查询所有班级")
     String allClass2(int page, int limit){
         int count = classService.countSClass();
         List<SClass> resultList = classService.pageClass(page,limit);
@@ -62,6 +65,7 @@ public class ClassController {
 
     //跳转界面
     @RequestMapping("toclasslist")
+    @LogAnnotation
     public String toclasslist(){
         return "class/allclass";
     }
@@ -70,7 +74,7 @@ public class ClassController {
     //根据classid值删除class
     @ResponseBody
     @RequestMapping("class/delete/{classId}")
-
+    @LogAnnotation(operateType="删除班级")
     public void deleteClassById(@PathVariable("classId") String classId){
         SClass sClass = new SClass();
         sClass.setClassId(classId);
@@ -79,6 +83,7 @@ public class ClassController {
 
     //跳转到编辑班级界面
     @RequestMapping("class/toeditclass/{classId}")
+    @LogAnnotation
     public ModelAndView toeidtclass2(@PathVariable("classId") String classId){
 
         ModelAndView modelAndView = new ModelAndView();
@@ -96,6 +101,7 @@ public class ClassController {
 
     //编辑班级信息（提交到数据库）
     @RequestMapping("editclass")
+    @LogAnnotation(operateType="编辑班级信息")
     public String editClass2(SClass sClass, Model model){
 
         classService.updateSClassById(sClass);
@@ -110,6 +116,7 @@ public class ClassController {
     跳转到班级详细成绩的页面
      */
     @RequestMapping("class/todetail")
+    @LogAnnotation
     public String class_todetail(String class_cid,Model model){
         model.addAttribute("class_cid",class_cid);
         return "class/class_student_detail";
@@ -122,6 +129,7 @@ public class ClassController {
 
     @ResponseBody
     @RequestMapping("class/detail/{class_cid}")
+    @LogAnnotation(operateType="查询班级所有学生的成绩")
     public String classDetail2(@PathVariable("class_cid") String class_cid,int page,int limit,Model model){
         model.addAttribute("class_cid",class_cid);
 
@@ -135,6 +143,7 @@ public class ClassController {
 
     //跳转到所有班级成绩
     @RequestMapping("toclassgrades")
+    @LogAnnotation(operateType="查询所有班级成绩")
     public String toclassgrades(){
         return "class/classgrades";
     }
