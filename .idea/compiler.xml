@@ -24,28 +24,28 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="student-management-system" target="1.5" />
-      <module name="student-management-system-class" target="1.5" />
-      <module name="student-management-system-class-api" target="1.5" />
-      <module name="student-management-system-class-provider" target="1.5" />
-      <module name="student-management-system-commons" target="1.5" />
-      <module name="student-management-system-domain" target="1.5" />
-      <module name="student-management-system-grades" target="1.5" />
-      <module name="student-management-system-grades-api" target="1.5" />
-      <module name="student-management-system-grades-provider" target="1.5" />
-      <module name="student-management-system-log" target="1.5" />
-      <module name="student-management-system-log-api" target="1.5" />
-      <module name="student-management-system-log-provider" target="1.5" />
-      <module name="student-management-system-permission" target="1.5" />
-      <module name="student-management-system-permission-api" target="1.5" />
-      <module name="student-management-system-permission-provider" target="1.5" />
-      <module name="student-management-system-student" target="1.5" />
-      <module name="student-management-system-student-api" target="1.5" />
-      <module name="student-management-system-student-provider" target="1.5" />
-      <module name="student-management-system-user" target="1.5" />
-      <module name="student-management-system-user-api" target="1.5" />
-      <module name="student-management-system-user-provider" target="1.5" />
-      <module name="student-management-system-web" target="1.5" />
+      <module name="student-management-system" target="1.8" />
+      <module name="student-management-system-class" target="1.8" />
+      <module name="student-management-system-class-api" target="1.8" />
+      <module name="student-management-system-class-provider" target="1.8" />
+      <module name="student-management-system-commons" target="1.8" />
+      <module name="student-management-system-domain" target="1.8" />
+      <module name="student-management-system-grades" target="1.8" />
+      <module name="student-management-system-grades-api" target="1.8" />
+      <module name="student-management-system-grades-provider" target="1.8" />
+      <module name="student-management-system-log" target="1.8" />
+      <module name="student-management-system-log-api" target="1.8" />
+      <module name="student-management-system-log-provider" target="1.8" />
+      <module name="student-management-system-permission" target="1.8" />
+      <module name="student-management-system-permission-api" target="1.8" />
+      <module name="student-management-system-permission-provider" target="1.8" />
+      <module name="student-management-system-student" target="1.8" />
+      <module name="student-management-system-student-api" target="1.8" />
+      <module name="student-management-system-student-provider" target="1.8" />
+      <module name="student-management-system-user" target="1.8" />
+      <module name="student-management-system-user-api" target="1.8" />
+      <module name="student-management-system-user-provider" target="1.8" />
+      <module name="student-management-system-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

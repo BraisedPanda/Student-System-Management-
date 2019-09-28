@@ -1,0 +1,4 @@
+FROM openjdk:8
+MAINTAINER braised_panda
+COPY ./dockerdemo-0.0.1-SNAPSHOT.jar mydockerapp.jar
+CMD java -jar mydockerapp.jar

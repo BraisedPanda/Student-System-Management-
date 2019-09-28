@@ -94,6 +94,7 @@ public class LogAspect {
         }
         if(log.getUsername() !=null && log.getOperation()!=null && log.getOperation().length()>0){
             logService.insert(log);
+            System.out.println("存入数据库的log:"+log);
         }
         Object result = pjp.proceed();
         return result;

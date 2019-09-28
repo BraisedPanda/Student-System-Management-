@@ -40,7 +40,7 @@ public class LogController {
         List<OperationLog> resultList = logService.pageOperationLog(page,limit);
 
         String result = JsonUtils.createResultJson(ResultType.SimpleResultType.SUCCESS,count,resultList).toJSONString();
-        System.out.println(result);
+
         return result;
     }
 
