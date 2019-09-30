@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="http://www.braisedpanda.club:8082/StudentSystem/static/layui/css/layui.css">
+    <link rel="stylesheet" href="/layui/css/layui.css">
     <link rel="stylesheet" th:href="@{/lib/css/top.css}">
-    <script src="http://www.braisedpanda.club:8082/StudentSystem/static/layui/layui.js"></script>
+    <script src="/layui/layui.js"></script>
 </head>
 <style>
 
@@ -21,7 +21,7 @@
             <a href="userinfo">个人中心<span class="layui-badge-dot"></span></a>
         </li>
         <li class="layui-nav-item">
-            <a href="#"><img src="http://www.braisedpanda.club:8082/StudentSystem/static/images/2019-08-07/f8aa0870-e4ea-4170-9772-296204476267.jpg" class="layui-nav-img" th:text="'你好，'+${session.user.username}"></a>
+            <a href="#"><img src="/images/2019-08-07/f8aa0870-e4ea-4170-9772-296204476267.jpg" class="layui-nav-img" th:text="'你好，'+${session.user.username}"></a>
 
         </li>
         <li class="layui-nav-item">

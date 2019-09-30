@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>用户列表</title>
 
-    <link rel="stylesheet" href="http://www.braisedpanda.club:8082/StudentSystem/static/layui/css/layui.css">
-    <link rel="stylesheet" href="http://www.braisedpanda.club:8082/StudentSystem/static/lib/css/main.css">
-    <link rel="stylesheet" href="http://www.braisedpanda.club:8082/StudentSystem/static/lib/css/public.css">
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/lib/css/main.css">
+    <link rel="stylesheet" href="/lib/css/public.css">
 
-    <script src="http://www.braisedpanda.club:8082/StudentSystem/static/lib/js/jquery-3.4.1.min.js"></script>
-    <script src="http://www.braisedpanda.club:8082/StudentSystem/static/layui/layui.js"></script>
+    <script src="/lib/js/jquery-3.4.1.min.js"></script>
+    <script src="/layui/layui.js"></script>
 
 
 
@@ -17,7 +17,7 @@
 
 <style>
     body{
-        background-image: url("http://www.braisedpanda.club:8082/StudentSystem/static/images/background/page_bg.JPG");
+        background-image: url("/images/background/page_bg.JPG");
         background-size: 100%;
 
     }
@@ -159,12 +159,12 @@
                 {type: 'checkbox', fixed: 'left'}
                 ,{field: 'uid', title: 'ID', width:'8%', sort: true}
                 ,{field: 'username', title: '用户名', width:'10%'}
-                ,{field: 'images', title: '头像', sort: false,
+                ,{field: 'images', width:'5%',title: '头像', sort: false,
                     templet:function (d) { return '<div><img style="height: 30px;width: 30px" src='+d.images+'></div>' }
 
                 }
                 ,{field: 'password', title: '密码', width: '10%', sort: true}
-                ,{field: 'email', title: '邮箱', width:'15%', sort: true}
+                ,{field: 'email', title: '邮箱', sort: true}
                 ,{field: 'birthday', title: '生日', width: '10%', sort: true}
                 ,{field: 'gender', title: '性别', width:'8%'}
 //                ,{field: 'userRoleList', title: '角色', width: '15%',

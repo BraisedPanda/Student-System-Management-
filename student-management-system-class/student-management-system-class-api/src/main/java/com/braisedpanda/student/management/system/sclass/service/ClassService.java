@@ -28,4 +28,6 @@ public interface ClassService {
     int countSClass();
 
     List<SClass> pageClass(int page,int limit);
+
+    List<SClass> listSClassByOrder();
 }

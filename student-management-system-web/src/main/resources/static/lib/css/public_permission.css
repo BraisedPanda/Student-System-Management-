@@ -23,7 +23,7 @@
     height:700px;
 }
 .bodyimg{
-    background: url("http://www.braisedpanda.club:8082/StudentSystem/static/images/background/page_bg.JPG");
+    background: url("/images/background/page_bg.JPG");
     background-size: 100%;
 
 }

@@ -8,6 +8,7 @@ import com.braisedpanda.student.management.system.sclass.mapper.ClassMapper;
 import com.github.pagehelper.PageHelper;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import tk.mybatis.mapper.entity.Example;
 
 
 import java.util.List;
@@ -112,5 +113,20 @@ public class ClassServiceImpl implements ClassService {
         PageHelper.startPage(page,limit);
         List<SClass> sClassList = classMapper.selectAll();
         return PageHelperUtils.getResultList(sClassList);
+    }
+    /**
+    * @Description:
+    * @author: chenzhen
+    * @Date: 2019/9/30 0030
+    */
+    @Override
+    public List<SClass> listSClassByOrder() {
+        Example example = new Example(SClass.class);
+        example.setOrderByClause("classCount");
+        Example.Criteria criteria = example.createCriteria();
+        List<SClass> resultList = classMapper.selectByExample(example);
+        int count = resultList.size();
+
+        return  resultList.subList(count-6,count);
     }
 }
